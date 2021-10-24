@@ -10,7 +10,7 @@ import { Box } from '@chakra-ui/layout';
 
 const AppNavbar: React.FC<{ isTransparent: boolean, ref: Ref<HTMLDivElement> }> = React.forwardRef(({ isTransparent }, ref: Ref<HTMLDivElement>) => {
   const router = useRouter();
-  const keyword: string = String(router.query?.keyword || '');
+  const keyword: string = String(router.query?.q || '');
 
   const [isOpen, setIsOpen] = React.useState<boolean>(false);
 

@@ -7,6 +7,10 @@ import { SearchIcon } from '@chakra-ui/icons';
 
 const MviNavbarSearch: React.FC<i.NavbarSearch> = ({ isOpen, keyword, placeholder, action }) => {
   const [inputValue, setInputValue] = React.useState<string>(keyword);
+  
+  React.useEffect(() => {
+    setInputValue(keyword);
+  }, [keyword]);
 
   return (
     <Box
@@ -21,6 +25,7 @@ const MviNavbarSearch: React.FC<i.NavbarSearch> = ({ isOpen, keyword, placeholde
       border="2px solid #D1D5DB"
     >
       <Input
+        name="q"
         value={inputValue}
         placeholder={placeholder}
         onChange={(e) => setInputValue(e.target.value)}

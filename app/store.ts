@@ -1,9 +1,11 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
 import moviesReducer from './movies/index.reducer';
+import searchReducer from './search/index.reducer';
 
 export const store = configureStore({
   reducer: {
-    movies: moviesReducer
+    movies: moviesReducer,
+    search: searchReducer
   }
 });
 
