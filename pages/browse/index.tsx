@@ -1,6 +1,8 @@
 import Head from 'next/head';
 import AppLayout from '../../features/app-layout/index.feature';
 import MviHeroLanding from '../../components/mvi-hero-landing/index.component';
+import FeaturedMovies from '../../features/featured-movies/index.feature';
+import { Box } from '@chakra-ui/layout';
 
 export default function Browse() {
   return (
@@ -19,6 +21,9 @@ export default function Browse() {
             href: '/watch?v=batman-the-dark-knight'
           }}
         />
+        <Box p={8}>
+          <FeaturedMovies />
+        </Box>
       </AppLayout>
     </div>
   );

@@ -21,6 +21,7 @@ const MviHeroLanding: React.FC<i.HeroLanding> = (props) => {
         h="full"
         display="flex"
         alignItems="center"
+        zIndex="1"
       >
         <Box w="50%">
           <Heading color="white">
@@ -28,11 +29,9 @@ const MviHeroLanding: React.FC<i.HeroLanding> = (props) => {
           </Heading>
           <Text display="block" color="white" mt="4" mb="2">{props.description}</Text>
           <Link href={props.button.href}>
-            <a>
-              <Button bg="red.500" color="white" fontWeight="bold" p={6}>
-                {props.button.label}
-              </Button>
-            </a>
+            <Button as="a" bg="red.500" color="white" fontWeight="bold" p={6}>
+              {props.button.label}
+            </Button>
           </Link>
         </Box>
       </Box>
